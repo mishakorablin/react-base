@@ -1,20 +1,30 @@
 import { ApolloProvider } from '@apollo/react-hooks'
 import { ThemeProvider } from 'emotion-theming'
+import { Global, css } from '@emotion/core';
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { client } from '~/client'
+import { client } from '/data/client'
 
-import { DemoApp } from '~/DemoApp'
+import { App } from '/App'
 
-import { theme } from '~/theme'
+import { theme } from '/theme'
 
-const App = () => (
+const globalStyles = css`
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+const AppBase = () => (
   <ApolloProvider client={client}>
     <ThemeProvider theme={theme}>
-      <DemoApp />
+      <Global styles={globalStyles} />
+      <App />
     </ThemeProvider>
   </ApolloProvider>
 )
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<AppBase />, document.getElementById('root'))

@@ -8,14 +8,15 @@ const Window = styled.article`
   font-family: Helvetica, sans-serif;
   padding: 10px 30px;
   line-height: 1.5em;
-`
+`;
 
-export const DemoApp = () => {
-  const greeting = useGreeting()
+export const App = () => {
+  const greeting = useGreeting();
 
+  
   return (
     <Window>
-      <HelloHeader>{greeting}</HelloHeader>
+      <HelloHeader>{greeting} 👋</HelloHeader>
 
       <p>
         This is just a simple starting point for you to try out new ideas in an
