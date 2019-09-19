@@ -1,14 +1,14 @@
-import { ApolloProvider } from '@apollo/react-hooks'
-import { ThemeProvider } from 'emotion-theming'
+import { ApolloProvider } from '@apollo/react-hooks';
+import { ThemeProvider } from 'emotion-theming';
 import { Global, css } from '@emotion/core';
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { client } from '/data/client'
+import { client } from '/data/client';
 
-import { App } from '/App'
+import { App } from '/App';
 
-import { theme } from '/theme'
+import { theme } from '/theme';
 
 const globalStyles = css`
   html,
@@ -25,6 +25,6 @@ const AppBase = () => (
       <App />
     </ThemeProvider>
   </ApolloProvider>
-)
+);
 
-ReactDOM.render(<AppBase />, document.getElementById('root'))
+ReactDOM.render(<AppBase />, document.getElementById('root'));
