@@ -23,5 +23,5 @@ export const App = () => {
         environment that simulates our Sandy React Apps
       </p>
     </Window>
-  )
-}
+  );
+};

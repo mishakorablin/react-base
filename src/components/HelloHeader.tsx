@@ -1,6 +1,6 @@
-import { styled } from '~/theme'
+import { styled } from '~/theme';
 
-export const HelloHeader = styled.h2`
+export const HelloHeader = styled.h2`;
   font-family: Georgia;
   color: ${props => props.theme.palette.secondaryLight};
   border-color: ${props => props.theme.palette.secondaryLight};
@@ -15,4 +15,4 @@ export const HelloHeader = styled.h2`
     padding: 5px 16px 4px;
     margin-top: -1px;
   }
-`
+`;

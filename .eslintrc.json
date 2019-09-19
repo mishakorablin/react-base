@@ -1,0 +1,72 @@
+{
+  "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true
+  },
+  "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended"
+  ],
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "project": "./tsconfig.json"
+  },
+  "plugins": [
+      "react",
+      "import",
+      "@typescript-eslint"
+  ],
+  "settings": {
+      "react": {
+          "version": "detect"
+      }
+  },
+  "rules": {
+      // General ESLint Rules: https://eslint.org/docs/rules/
+      "comma-dangle": [ "error", "only-multiline"],
+      "max-statements": ["off"],
+      "newline-per-chained-call": ["off"],
+      "no-console": ["warn", {"allow": ["warn", "error"] } ],
+      "no-empty": ["error", { "allowEmptyCatch": true }],
+      "no-void": ["error"],
+      "quote-props": [ "error", "consistent-as-needed"],
+      "semi": ["error"],
+      "sort-keys": ["error", "asc", { "caseSensitive": false, "natural": true }],
+
+      // Typescript ESLint plugin: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
+      // For transition from TSLint, please read this: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/ROADMAP.md
+      "@typescript-eslint/camelcase": ["error", { "properties": "never"} ],
+      "@typescript-eslint/explicit-function-return-type": ["off"],
+      "@typescript-eslint/explicit-member-accessibility": ["off"],
+      "@typescript-eslint/indent": ["error", 2],
+      "@typescript-eslint/no-explicit-any": ["off"],
+      "@typescript-eslint/no-non-null-assertion": ["off"],
+      "@typescript-eslint/no-object-literal-type-assertion": ["off"],
+
+      // Need to revisit later, it requires refactoring in different places
+      "@typescript-eslint/interface-name-prefix":["off"],
+      "@typescript-eslint/no-triple-slash-reference": ["off"],
+      "@typescript-eslint/no-namespace": ["off"],
+
+      // ESLint Import Plugin: https://github.com/benmosher/eslint-plugin-import#rules
+      "import/no-extraneous-dependencies": ["off"],
+      "import/no-internal-modules": ["off"],
+      "import/no-relative-parent-imports": ["error"],
+      "import/no-unassigned-import": ["off"],
+
+      // ESLint React Rules: https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
+      "react/jsx-boolean-value": ["error", "never"],
+      "react/jsx-uses-react": ["error"],
+      "react/jsx-uses-vars": ["error"],
+      "react/no-this-in-sfc": ["error"],
+      "react/no-unused-state": ["error"]
+  }
+}
