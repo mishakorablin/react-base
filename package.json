@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "parcel src/index.html",
     "build": "parcel build index.html",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --format codeframe ./src",
+    "start": "parcel src/index.html",
     "test": "jest"
   },
   "dependencies": {
