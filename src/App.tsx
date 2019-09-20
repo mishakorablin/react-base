@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import { HelloHeader } from '~/components/HelloHeader'
-import { useGreeting } from '~/hooks/useGreeting'
-import { styled } from '~/theme'
+import { HelloHeader } from '~/components/HelloHeader';
+import { useGreeting } from '~/hooks/useGreeting';
+import { styled } from '~/theme';
 
 const Window = styled.article`
   font-family: Helvetica, sans-serif;
@@ -13,7 +13,7 @@ const Window = styled.article`
 export const App = () => {
   const greeting = useGreeting();
 
-  
+
   return (
     <Window>
       <HelloHeader>{greeting} 👋</HelloHeader>

@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.html",
   "scripts": {
+    "build": "parcel build index.html",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --format codeframe ./src",
     "start": "parcel src/index.html",
-    "build": "parcel build index.html"
+    "test": "jest"
   },
   "dependencies": {
     "@apollo/react-hooks": "3.0.0",
@@ -25,12 +27,15 @@
     "react-dom": "16.8.6"
   },
   "devDependencies": {
+    "@types/jest": "24.0.18",
     "@typescript-eslint/eslint-plugin": "2.3.0",
     "@typescript-eslint/parser": "2.3.0",
     "eslint": "6.4.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-react": "7.14.3",
+    "jest": "24.9.0",
     "parcel-bundler": "1.12.3",
+    "ts-jest": "24.1.0",
     "typescript": "3.6.3"
   },
   "keywords": []

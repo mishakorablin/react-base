@@ -1,20 +1,20 @@
-import styled, { CreateStyled } from '@emotion/styled'
+import styled, { CreateStyled } from '@emotion/styled';
 
-// tslint:disable:object-literal-sort-keys
+/* eslint-disable sort-keys */
 export interface Theme {
   palette: {
-    primary: string
-    primaryMedium: string
-    primaryLight: string
-    primaryMediumLight: string
-    primaryHighlight: string
-    secondary: string
-    secondaryLight: string
-    secondaryHighlight: string
-    primaryNeutral: string
-    backgroundNeutral: string
-    destructive: string
-  }
+    primary: string;
+    primaryMedium: string;
+    primaryLight: string;
+    primaryMediumLight: string;
+    primaryHighlight: string;
+    secondary: string;
+    secondaryLight: string;
+    secondaryHighlight: string;
+    primaryNeutral: string;
+    backgroundNeutral: string;
+    destructive: string;
+  };
 }
 
 export const theme: Theme = {
@@ -31,8 +31,8 @@ export const theme: Theme = {
     backgroundNeutral: '#191919',
     destructive: '#f50057',
   },
-}
-// tslint:enable:object-literal-sort-keys
+};
+/* eslint-enable sort-keys */
 
-const themeStyled = styled as CreateStyled<Theme>
-export { themeStyled as styled }
+const themeStyled = styled as CreateStyled<Theme>;
+export { themeStyled as styled };

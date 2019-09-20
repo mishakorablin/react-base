@@ -37,6 +37,7 @@
       "no-console": ["warn", {"allow": ["warn", "error"] } ],
       "no-empty": ["error", { "allowEmptyCatch": true }],
       "no-void": ["error"],
+      "quotes": ["error", "single"],
       "quote-props": [ "error", "consistent-as-needed"],
       "semi": ["error"],
       "sort-keys": ["error", "asc", { "caseSensitive": false, "natural": true }],
