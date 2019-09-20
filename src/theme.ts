@@ -1,6 +1,6 @@
 import styled, { CreateStyled } from '@emotion/styled';
 
-// tslint:disable:object-literal-sort-keys
+/* eslint-disable sort-keys */
 export interface Theme {
   palette: {
     primary: string;
@@ -32,7 +32,7 @@ export const theme: Theme = {
     destructive: '#f50057',
   },
 };
-// tslint:enable:object-literal-sort-keys
+/* eslint-enable sort-keys */
 
 const themeStyled = styled as CreateStyled<Theme>;
 export { themeStyled as styled };
