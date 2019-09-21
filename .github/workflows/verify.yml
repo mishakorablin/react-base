@@ -38,5 +38,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install node dependencies
         run: npm ci --production=false
-      - name: Lint
-        run: npm run lint
+      - name: Annotated ESLint
+        uses: rkusa/eslint-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ESLINT_CMD: npm run lint
