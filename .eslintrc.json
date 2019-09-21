@@ -68,6 +68,7 @@
       "react/jsx-uses-react": ["error"],
       "react/jsx-uses-vars": ["error"],
       "react/no-this-in-sfc": ["error"],
-      "react/no-unused-state": ["error"]
+      "react/no-unused-state": ["error"],
+      "react/prop-types": ["off"]
   }
 }
