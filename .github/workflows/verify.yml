@@ -40,6 +40,7 @@ jobs:
         run: npm ci --production=false
       - name: Annotated ESLint
         uses: rkusa/eslint-action@master
+        args:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ESLINT_CMD: npm run lint
