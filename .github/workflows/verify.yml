@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: node-12.10.0-alpine
+      image: node:12.10.0-alpine
       volumes:
         - app_volume
 
