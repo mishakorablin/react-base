@@ -31,7 +31,7 @@ jobs:
     needs: base
 
     container:
-      image: node-12.10.0-alpine
+      image: node:12.10.0-alpine
       volumes:
         - app_volume
 
@@ -48,6 +48,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: base
 
+    container:
+      image: node:12.10.0-alpine
+      volumes:
+        - app_volume
+
     strategy:
       matrix:
         node-version: [12.x]
@@ -60,6 +65,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     needs: base
+
+    container:
+      image: node:12.10.0-alpine
+      volumes:
+        - app_volume
 
     strategy:
       matrix:
