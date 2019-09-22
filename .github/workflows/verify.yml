@@ -1,6 +1,9 @@
 name: Verify
 
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - master
 
 jobs:
   test:
@@ -40,3 +43,22 @@ jobs:
         run: npm ci --production=false
       - name: Lint
         run: npm run lint
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install node dependencies
+        run: npm ci --production=false
+      - name: Build
+        run: npm run build
