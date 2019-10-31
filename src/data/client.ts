@@ -4,6 +4,6 @@ import ApolloClient from 'apollo-client';
 const cache = new InMemoryCache();
 
 export const client = new ApolloClient({
-  cache,
   resolvers: {},
+  cache,
 });
