@@ -1,9 +1,7 @@
 name: Verify
 
 on:
-  push:
-    branches-ignore:
-      - master
+  check_run
 
 jobs:
   test:
