@@ -1,9 +1,7 @@
 name: Verify
 
 on:
-  pull_request:
-    branches-ignore:
-      - master
+  pull_request
 
 jobs:
   test:
@@ -35,7 +33,7 @@ jobs:
 
     steps:
       - name: What's my base?
-        run: echo "-$GITHUB_BASE_REF-"
+        run: echo "${{ github.event.pull_request.head }}"
       - uses: actions/checkout@master
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
