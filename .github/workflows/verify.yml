@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: What's my base?
-        run: echo "${{ github.event.pull_request.head.ref }}"
+        run: echo "${{ github.event.base.ref }}"
       - uses: actions/checkout@master
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
