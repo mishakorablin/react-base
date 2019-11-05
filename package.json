@@ -6,6 +6,7 @@
   "scripts": {
     "build": "parcel build src/index.html",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --format codeframe ./src",
+    "lint:ci": "eslint --ext .js,.jsx,.ts,.tsx --format stylish ./src",
     "start": "parcel src/index.html",
     "test": "jest"
   },
