@@ -40,7 +40,6 @@
       "quotes": ["error", "single"],
       "quote-props": [ "error", "consistent-as-needed"],
       "semi": ["error"],
-      "sort-keys": ["error", "asc", { "caseSensitive": false, "natural": true }],
 
       // Typescript ESLint plugin: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
       // For transition from TSLint, please read this: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/ROADMAP.md
